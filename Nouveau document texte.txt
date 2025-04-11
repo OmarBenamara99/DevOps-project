@@ -1,0 +1,45 @@
+sudo chmod 666 /var/run/docker.sock
+--------------------------
+docker stop 3b10cd5ba68b      sonarqube
+docker stop 3724aef11780      nexus
+docker stop 9ea76dbe86f8      prometheus
+docker stop 93d1c0e611ff      grafana
+--------------------------
+docker stop 15971de88b68      spring app
+docker stop b4e544904312      mysql DB
+--------------------------
+http://192.168.50.10/api/subscription/add
+
+{
+    "typeSub": "ANNUAL",
+    "startDate": "2024-11-03"
+}
+
+http://192.168.50.10:80/api/subscription/get/1
+----------------
+Mac windows : 34-CF-F6-05-78-E1
+max linux   : 08-00-27-92-AB-D1
+----------------------
+private ISubscriptionRepository subscriptionRepository; lena bl mock nsimuli interaction maa repo maghyr manest7a9 DB
+@beforeeach tetaaml 9bal kol test w f west e setup nmocki e repo w naaml instance l serviceImpl using el mock
+testAddSubscription() test lel ajout sub mloul mockito yrajaa sub wa9tli fama call l save
+                      baeed tsir e test lel method wl assert bch net2kaed objet moch nul + type sub annual
+testGetSubscriptionByType() mloul njib e sub par type baeed njib menha ely type pteeha monthly baeed assert l non nul + taille 1
+--------------------------
+CH1 : Introdution
+Devops : howa culture + ameliore communication bin dev + pro + automatisation des phases de projet => reduiri temps mise en marché
+agilité bin equipe dev w clients devops bin equipe dev w equipe ops
+avantages : reduction temps + optimisation ressource + amélioration qualité
+CI : intégration continue => conssist a compiler tester et déployer dans environment dintégration
+CD : livraison continue   => processus orienté deployment dans environement donné kima qualif wala preprod Mais moch prod prod manuelle lena
+CD : déploiement continue => kima livraison ama maaha environment prod automatique zeda
+les outils : Maven     : outil de build + gestion projet dev
+             Junit     : framework test unitaire lel java
+             git       : logiciel gestion de version
+             sonarqube : logiciel de mesure de qualité de code source
+             nexus     : gestionnaire de réferentiel qui gére les artéfact necessaire au dev
+             jenkins   : outil dintégration continue
+             Docker    : outil de packetage des app + dépendance dans un conteneur isolé
+             Docker compose : outil de gestion des apps multi conteneurs a laide des fichiers YAML pour les services,Rx,volumes...
+             prometheus: logiciel qui enregistre des métriques en temps réel
+             grafana   : logiciel qui crée des graphique pour des données
